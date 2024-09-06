@@ -25,13 +25,10 @@ public class Document {
         return this.texte;
     }
 
-    private String assembler(String txt, int debut, int fin) {
+    public void remplacer(int debut, int fin, String remplacement) {
         String partieGauche = texte.substring(0, debut);
         String partieDroite = texte.substring(fin + 1);
-        return partieGauche + txt + partieDroite;
-    }
-    public void remplacer(int debut, int fin, String remplacement) {
-        texte = assembler(remplacement, debut, fin);
+        texte = partieGauche + remplacement + partieDroite;
     }
 
     public void majuscules(int debut, int fin) {
@@ -39,10 +36,10 @@ public class Document {
         for (int i = debut; i <= fin; i++) {
             nouvo += Character.toUpperCase(texte.charAt(i));
         }
-        texte = assembler(nouvo, debut, fin);
+        remplacer(debut, fin, nouvo);
     }
 
     public void effacer(int i, int i1) {
-        texte = assembler("", i, i1);
+        remplacer(i, i1, "");
     }
 }
