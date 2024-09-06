@@ -43,5 +43,5 @@ public class Document {
         remplacer(i, i1, "");
     }
 
-    public void clear() {remplacer(0, texte.length(), ""+"a");}
+    public void clear() {remplacer(0, texte.length(), "");}
 }

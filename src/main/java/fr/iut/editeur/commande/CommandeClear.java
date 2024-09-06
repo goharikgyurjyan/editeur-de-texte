@@ -12,7 +12,7 @@ public class CommandeClear extends CommandeDocument {
     @Override
     public void executer() {
         if(parameters.length < 3) {
-            System.err.println("Format attendu : majuscules;int;int");
+            System.err.println("Format attendu : clear;int;int");
             return;
         }
         this.document.clear();
