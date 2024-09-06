@@ -25,19 +25,24 @@ public class Document {
         return this.texte;
     }
 
-    public void remplacer(int debut, int fin, String remplacement) {
+    private String assembler(String txt, int debut, int fin) {
         String partieGauche = texte.substring(0, debut);
         String partieDroite = texte.substring(fin + 1);
-        texte = partieGauche + remplacement + partieDroite;
+        return partieGauche + txt + partieDroite;
+    }
+    public void remplacer(int debut, int fin, String remplacement) {
+        texte = assembler(remplacement, debut, fin);
     }
 
     public void majuscules(int debut, int fin) {
         String nouvo = "";
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
         for (int i = debut; i <= fin; i++) {
             nouvo += Character.toUpperCase(texte.charAt(i));
         }
-        texte = partieGauche + nouvo + partieDroite;
+        texte = assembler(nouvo, debut, fin);
+    }
+
+    public void effacer(int i, int i1) {
+        texte = assembler("", i, i1);
     }
 }
