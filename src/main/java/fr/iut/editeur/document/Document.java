@@ -42,4 +42,6 @@ public class Document {
     public void effacer(int i, int i1) {
         remplacer(i, i1, "");
     }
+
+    public void clear() {remplacer(0, texte.length(), ""+"a");}
 }
