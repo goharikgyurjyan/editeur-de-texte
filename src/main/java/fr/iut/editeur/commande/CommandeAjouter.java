@@ -22,7 +22,7 @@ public class CommandeAjouter extends CommandeDocument {
 
     @Override
     public String getDescriptionCommande() {
-        return "";
+        return "Permet d'ajouter un texte à la suite du document";
     }
 
 }
