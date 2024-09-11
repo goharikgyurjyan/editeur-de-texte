@@ -19,4 +19,9 @@ public class CommandeEffacer extends CommandeDocument {
         super.executer();
     }
 
+    @Override
+    public String getDescriptionCommande() {
+        return "Permet d'effacer le texte compris entre les deux indices passés en paramètre";
+    }
+
 }
