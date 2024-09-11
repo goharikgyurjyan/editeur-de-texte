@@ -22,4 +22,9 @@ public class CommandeRemplacer extends CommandeDocument {
         super.executer();
     }
 
+    @Override
+    public String getDescriptionCommande() {
+        return "Permet de remplacer le texte situé aux indices donnés par le texte fourni en paramètre";
+    }
+
 }
