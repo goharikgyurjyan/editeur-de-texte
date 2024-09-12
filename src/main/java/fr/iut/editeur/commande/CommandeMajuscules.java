@@ -19,4 +19,9 @@ public class CommandeMajuscules extends CommandeDocument {
         super.executer();
     }
 
+    @Override
+    public String getDescriptionCommande() {
+        return "Permet de mettre en majsucules le texte situé entre les indices donnés";
+    }
+
 }
