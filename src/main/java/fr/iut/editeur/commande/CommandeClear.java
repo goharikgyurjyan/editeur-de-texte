@@ -19,4 +19,9 @@ public class CommandeClear extends CommandeDocument {
         super.executer();
     }
 
+    @Override
+    public String getDescriptionCommande() {
+        return "Permet de clear le document, de tout effacer";
+    }
+
 }
