@@ -38,6 +38,13 @@ public class Document {
         }
         remplacer(debut, fin, nouvo);
     }
+    public void minuscules(int debut, int fin) {
+        String nouvo = "";
+        for (int i = debut; i <= fin; i++) {
+            nouvo += Character.toLowerCase(texte.charAt(i));
+        }
+        remplacer(debut, fin, nouvo);
+    }
 
     public void effacer(int i, int i1) {
         remplacer(i, i1, "");
